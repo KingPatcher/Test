@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join Telegram</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    button {
+      background-color: #0088cc;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #006699;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Join Our Telegram Channel</h1>
+  <p>Tap the button below to open in Telegram App</p>
+
+  <button onclick="redirectToTelegram()">Open Telegram</button>
+
+  <script>
+    function redirectToTelegram() {
+      // Try to open the Telegram app first
+      window.location.href = "tg://resolve?domain=KingPatcher";
+
+      // Fallback to Telegram web if app doesn't open in 1.5 seconds
+      setTimeout(function () {
+        window.location.href = "https://t.me/KingPatcher";
+      }, 1500);
+    }
+  </script>
+
+</body>
+</html>
